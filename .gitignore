@@ -29,7 +29,8 @@
 
 # Vim swp
 *.swp
+.*.swo
 
 # Test input and output
-uva*.in
-uva*.out
+uva*.in*
+uva*.out*
