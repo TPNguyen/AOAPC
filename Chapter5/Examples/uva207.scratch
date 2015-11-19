@@ -1,0 +1,37 @@
+---------------------
+---------------------
+/* too tedious
+// separate lines into components
+auto fn_beg = p.find_first_not_of(' ');
+auto fn_end = p.find_first_of(' ', fn_beg);
+auto ln_beg = p.find_first_not_of(' ', fn_end);
+auto ln_end = p.find_first_of(' ', ln_beg);
+
+auto fr_beg = p.find_first_not_of(' ', ln_end);
+auto fr_end = p.find_first_of(' ', fr_beg);
+auto sr_beg = p.find_first_not_of(' ', fr_end);
+auto sr_end = p.find_first_of(' ', sr_beg);
+// No second round (first round DQ'ed) or second round is DQ'ed
+if (sr_beg == string::npos || (p[sr_beg] == 'D' && p[sr_beg+1] == 'Q'))
+continue;
+game[j].name = p.substr(fn_beg, ln_end-fn_beg);
+game[j].scores[0] = stoi(p.substr(fr_beg, fr_end-fr_beg));
+game[j].scores[1] = stoi(p.substr(sr_beg, sr_end-sr_beg));
+
+auto thr_beg = p.find_first_not_of(' ', sr_end);
+auto thr_end = p.find_first_of(' ', thr_beg);
+if (thr_beg != string::npos && p[thr_beg] != 'D')
+game[j].scores[2] = stoi(p.substr(thr_beg, thr_end-thr_beg));
+else
+game[j].scores[2] = -1;
+
+if (game[j].scores[2] != -1)
+{
+auto forthr_beg = p.find_first_not_of(' ', thr_end);
+if (forthr_beg != string::npos && p[forthr_beg] != 'D')
+game[j].scores[2] = stoi(p.substr(thr_beg));
+else
+game[j].scores[2] = -1;
+}
+++j;
+ */
