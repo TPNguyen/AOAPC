@@ -63,7 +63,7 @@ int main()
             {
                 for (auto &next: G[eced])
                 {
-                    if (vis[next.second]) continue;
+                    if (vis[next.second]) continue; // visited before
                     if (parents[next.second].first == 0 || next.first < parents[next.second].second)
                         parents[next.second] = {eced, next.first};
                     dist[next.second] = dist[eced]+1;
@@ -73,7 +73,7 @@ int main()
             sort(sorted_children.begin(), sorted_children.end());
             for (const auto &nc: sorted_children)
             {
-                if (vis[nc.second]) continue;
+                if (vis[nc.second]) continue; // visited on current level, like two parents pointing to the same child. First parent may have smaller color.
                 vis[nc.second] = 1;
                 Q.push(nc.second);
             }

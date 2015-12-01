@@ -34,12 +34,12 @@ int main()
             if(!occurred[end1])
             {
                 occurred[end1] = 1; num_nodes++;
-            }       
+            }
             if(!occurred[end2])
             {
                 occurred[end2] = 1; num_nodes++;
             }
-        } 
+        }
         // Degree check
         bool ok = true;
         int num_Odd = 0;

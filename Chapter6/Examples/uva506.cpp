@@ -70,7 +70,7 @@ int main()
         }
         else if (cmd_name == "REMOVE")
         {
-            auto itemind = Add(item); // it could remove an item not listed before at all
+            auto itemind = Add(item); // it could remove an item not listed before at all!!!
             if (items[itemind].status == 0)
                 cout << "   " << items[itemind].name << " is not installed.\n";
             else if (is_needed(itemind))
