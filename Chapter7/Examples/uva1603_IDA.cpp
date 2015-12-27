@@ -2,6 +2,10 @@
 
 // at most there are 2*5*(5+1) = 60 matchsticks
 // at most there are 5*5+4*4+...+1*1 = 55 squares
+//
+// For DLX solution:
+// https://github.com/morris821028/UVa/blob/master/temp/1603%20-%20Square%20Destroyer.cpp
+// http://www.xlgps.com/article/121393.html
 
 #include <iostream>
 #include <bitset>
